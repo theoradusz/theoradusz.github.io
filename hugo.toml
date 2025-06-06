@@ -1,9 +1,8 @@
 baseURL = 'https://radusz.com'
 languageCode = 'en-us'
-title = 'theo raduszynski'
+title = 'théo raduszynski'
 theme = 'hugo-bearblog'
 
 [params]
   blog_description = "personal thoughts and questions"
   hideMadeWithLine = true
-  DateForm = "2006.01.02"
