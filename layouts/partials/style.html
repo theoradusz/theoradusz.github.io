@@ -1,8 +1,16 @@
 <style>
+  @font-face {
+    font-family: 'charter';
+    src: url('/fonts/Charter Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
   :root {
     --width: 720px;
-    --font-main: Verdana, sans-serif;
-    --font-secondary: Verdana, sans-serif;
+    --font-main: Verdana, sans-serif; /* headings stay verdana */
+    --font-secondary: 'charter', serif; /* body text uses charter */
     --font-scale: 1.3em;
     
     /* rose pine light inspired palette */
@@ -21,6 +29,7 @@
     --h3-color: #56949f; /* teal */
     --h4-color: #8a9a7b; /* green-ish */
     --bold-color: #907aa9; /* lavender for bold text */
+    --blog-title-color: #286983; /* distinct color for blog title */
   }
 
   body {
@@ -135,8 +144,10 @@
     text-decoration: none;
   }
 
+  /* blog title styling - different from h1 */
   .title h1 {
-    font-size: 1.5em;
+    font-size: 1.7em;
+    color: var(--blog-title-color) !important; /* override h1 color */
   }
 
   .inline {
