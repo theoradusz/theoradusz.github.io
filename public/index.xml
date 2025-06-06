@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>théo raduszynski</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on théo raduszynski</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Jun 2025 10:30:20 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>test post</title>
+      <link>http://localhost:1313/blog/test-post/</link>
+      <pubDate>Fri, 06 Jun 2025 10:30:20 +0900</pubDate>
+      <guid>http://localhost:1313/blog/test-post/</guid>
+      <description>&lt;p&gt;Laurem ipsum dolor sit amet.&lt;/p&gt;&#xA;&lt;h2 id=&#34;title-2&#34;&gt;Title 2&lt;/h2&gt;&#xA;&lt;p&gt;Ceci est du texte sans intérêt.&lt;/p&gt;&#xA;&lt;h3 id=&#34;title-3&#34;&gt;Title 3&lt;/h3&gt;&#xA;&lt;p&gt;Same thing.&lt;/p&gt;&#xA;&lt;h4 id=&#34;title-4&#34;&gt;Title 4&lt;/h4&gt;&#xA;&lt;p&gt;This is a &lt;strong&gt;test post&lt;/strong&gt;. I will try to improve the &lt;em&gt;style&lt;/em&gt;.&#xA;Here is a &lt;a href=&#34;https://radusz.com&#34;&gt;link&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>collection</title>
+      <link>http://localhost:1313/collection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/collection/</guid>
+      <description>&lt;p&gt;A collection of various things I like a (hopefully) some context! The order has no significance. I will probably add and remove things over time.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;ducks&lt;/li&gt;&#xA;&lt;li&gt;Steven Wilson&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

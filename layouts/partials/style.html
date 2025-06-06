@@ -7,9 +7,17 @@
     font-display: swap;
   }
 
+  @font-face {
+    font-family: 'merriweather';
+    src: url('/fonts/Merriweather-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
   :root {
-    --width: 720px;
-    --font-main: Verdana, sans-serif; /* headings stay verdana */
+    --width: 780px;
+    --font-main: 'merriweather', Verdana, sans-serif; /* headings stay verdana */
     --font-secondary: 'charter', serif; /* body text uses charter */
     --font-scale: 1.3em;
     
@@ -17,19 +25,21 @@
     --background-color: #faf4ed;
     --text-color: #575279;
     --heading-color: #575279;
-    --link-color: #907aa9;
-    --visited-color: #ea9d34;
+    --link-color: rgb(99, 94, 201);
+    --link-color-hover: (99, 94, 201);
+    --visited-color: #d7912e;
     --code-background-color: #f2e9e1;
     --code-color: #575279;
     --blockquote-color: #6e6a86;
     
     /* colorful header colors matching your obsidian setup */
-    --h1-color: #b4637a; /* maroon-ish */
-    --h2-color: #d7827e; /* red-ish */
-    --h3-color: #56949f; /* teal */
-    --h4-color: #8a9a7b; /* green-ish */
-    --bold-color: #907aa9; /* lavender for bold text */
-    --blog-title-color: #286983; /* distinct color for blog title */
+    --h1-color: #575279; /* text-color for title */
+    --h2-color: #b4637a; /* maroon-ish */
+    --h3-color: #d7827e; /* red-ish */
+    --h4-color: #56949f; /* teal */
+    --h5-color: #8a9a7b; /* green-ish */
+    --bold-color: rgb(99, 94, 201); /* lavender for bold text */
+    --italic-color: rgb(99, 94, 201); /* lavender for italic text */
   }
 
   body {
@@ -59,6 +69,7 @@
   /* colorful headers like your obsidian theme */
   h1 {
     color: var(--h1-color);
+    font-size: 1.7em;
   }
 
   h2 {
@@ -76,12 +87,26 @@
   a {
     color: var(--link-color);
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: underline;
   }
 
   a:hover {
-    text-decoration: underline;
+    color: var(--link-color-hover);
+    text-decoration: none;
   }
+
+  a.title {
+  text-decoration: none !important;
+  }
+
+  h2.main_title {
+    font-size: 1.3em;
+  }
+
+  a.title:hover {
+    text-decoration: none !important;
+  }
+  
 
   nav a {
     margin-right: 8px;
@@ -92,15 +117,19 @@
     color: var(--bold-color);
   }
 
+  em {
+    color: var(--italic-color);
+  }
+
   button {
     margin: 0;
     cursor: pointer;
   }
 
   time {
-    font-family: monospace;
+    font-family: 'charter', monospace;
     font-style: normal;
-    font-size: 15px;
+    font-size: 1.1em; /* slightly bigger than text */
   }
 
   main {
@@ -140,16 +169,6 @@
     text-align: center;
   }
 
-  .title:hover {
-    text-decoration: none;
-  }
-
-  /* blog title styling - different from h1 */
-  .title h1 {
-    font-size: 1.7em;
-    color: var(--blog-title-color) !important; /* override h1 color */
-  }
-
   .inline {
     width: auto !important;
   }
@@ -180,6 +199,6 @@
   }
 
   ul.blog-posts li a:visited {
-    color: var(--visited-color);
+    color: var(--text-color);
   }
 </style>

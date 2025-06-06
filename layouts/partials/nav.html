@@ -1,7 +1,7 @@
 <a href="{{ "/" | relURL }}">théo</a>
 {{ with .Site.GetPage "/blog" }}
 <a href="{{ "/blog" | relURL }}">blog</a>
-{{ with .Site.GetPage "/other" }}
-<a href="{{ "/other" | relURL }}">other</a>
 {{ end }}
+{{ with .Site.GetPage "/collection" }}
+<a href="{{ "/collection" | relURL }}">collection</a>
 {{ end }}

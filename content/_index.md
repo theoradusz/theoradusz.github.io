@@ -2,4 +2,4 @@
 title: ""
 ---
 
-Sharing random thoughts, impressions and questions about engineering, the world and anything
+Add a nice introduction and link to resume.
