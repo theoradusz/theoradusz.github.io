@@ -1,3 +1,7 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://theoradusz.github.io'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'theo raduszynski'
+theme = 'hugo-bearblog'
+
+[params]
+  blog_description = "personal thoughts and questions"
