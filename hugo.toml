@@ -1,4 +1,4 @@
-baseURL = 'https://theoradusz.github.io'
+baseURL = 'https://radusz.com'
 languageCode = 'en-us'
 title = 'theo raduszynski'
 theme = 'hugo-bearblog'
