@@ -4,27 +4,23 @@
     --font-main: Verdana, sans-serif;
     --font-secondary: Verdana, sans-serif;
     --font-scale: 1em;
-    --background-color: #fff;
-    --heading-color: #222;
-    --text-color: #444;
-    --link-color: #3273dc;
-    --visited-color: #8b6fcb;
-    --code-background-color: #f2f2f2;
-    --code-color: #222;
-    --blockquote-color: #222;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background-color: #01242e;
-      --heading-color: #eee;
-      --text-color: #ddd;
-      --link-color: #8cc2dd;
-      --visited-color: #8b6fcb;
-      --code-background-color: #000;
-      --code-color: #ddd;
-      --blockquote-color: #ccc;
-    }
+    
+    /* rose pine light inspired palette */
+    --background-color: #faf4ed;
+    --text-color: #575279;
+    --heading-color: #575279;
+    --link-color: #907aa9;
+    --visited-color: #ea9d34;
+    --code-background-color: #f2e9e1;
+    --code-color: #575279;
+    --blockquote-color: #6e6a86;
+    
+    /* colorful header colors matching your obsidian setup */
+    --h1-color: #b4637a; /* maroon-ish */
+    --h2-color: #d7827e; /* red-ish */
+    --h3-color: #56949f; /* teal */
+    --h4-color: #8a9a7b; /* green-ish */
+    --bold-color: #907aa9; /* lavender for bold text */
   }
 
   body {
@@ -51,6 +47,23 @@
     color: var(--heading-color);
   }
 
+  /* colorful headers like your obsidian theme */
+  h1 {
+    color: var(--h1-color);
+  }
+
+  h2 {
+    color: var(--h2-color);
+  }
+
+  h3 {
+    color: var(--h3-color);
+  }
+
+  h4 {
+    color: var(--h4-color);
+  }
+
   a {
     color: var(--link-color);
     cursor: pointer;
@@ -67,7 +80,7 @@
 
   strong,
   b {
-    color: var(--heading-color);
+    color: var(--bold-color);
   }
 
   button {
@@ -108,7 +121,7 @@
 
   blockquote {
     border-left: 1px solid #999;
-    color: var(--code-color);
+    color: var(--blockquote-color);
     padding-left: 20px;
     font-style: italic;
   }
@@ -158,5 +171,4 @@
   ul.blog-posts li a:visited {
     color: var(--visited-color);
   }
-
 </style>
