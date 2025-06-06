@@ -1,0 +1,7 @@
+baseURL = 'https://radusz.com'
+languageCode = 'en-us'
+title = 'theo raduszynski'
+theme = 'hugo-bearblog'
+
+[params]
+  blog_description = "personal thoughts and questions"
