@@ -1,5 +1,5 @@
 ---
-title: "Welcome"
+title: "théo raduszynski"
 ---
 
-Welcome to my blog! This is the homepage.
+Sharing random thoughts, impressions and questions about engineering, the world and anything..

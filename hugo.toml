@@ -5,3 +5,4 @@ theme = 'hugo-bearblog'
 
 [params]
   blog_description = "personal thoughts and questions"
+  hideMadeWithLine = true
