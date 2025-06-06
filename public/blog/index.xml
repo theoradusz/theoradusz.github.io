@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on théo raduszynski</title>
+    <title>blog on théo raduszynski</title>
     <link>http://localhost:1313/blog/</link>
-    <description>Recent content in Blogs on théo raduszynski</description>
+    <description>Recent content in blog on théo raduszynski</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Jun 2025 10:30:20 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>test post</title>
+      <title>This is a test post, not very interesting</title>
       <link>http://localhost:1313/blog/test-post/</link>
       <pubDate>Fri, 06 Jun 2025 10:30:20 +0900</pubDate>
       <guid>http://localhost:1313/blog/test-post/</guid>
-      <description>&lt;p&gt;Laurem ipsum dolor sit amet.&lt;/p&gt;&#xA;&lt;h2 id=&#34;title-2&#34;&gt;Title 2&lt;/h2&gt;&#xA;&lt;p&gt;Ceci est du texte sans intérêt.&lt;/p&gt;&#xA;&lt;h3 id=&#34;title-3&#34;&gt;Title 3&lt;/h3&gt;&#xA;&lt;p&gt;Same thing.&lt;/p&gt;&#xA;&lt;h4 id=&#34;title-4&#34;&gt;Title 4&lt;/h4&gt;&#xA;&lt;p&gt;This is a &lt;strong&gt;test post&lt;/strong&gt;. I will try to improve the &lt;em&gt;style&lt;/em&gt;.&#xA;Here is a &lt;a href=&#34;https://radusz.com&#34;&gt;link&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&#xA;&lt;h2 id=&#34;title-2&#34;&gt;Title 2&lt;/h2&gt;&#xA;&lt;p&gt;Ceci est du texte sans intérêt.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
