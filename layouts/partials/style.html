@@ -9,7 +9,7 @@
 
   @font-face {
     font-family: 'merriweather';
-    src: url('/fonts/Merriweather-Regular.ttf') format('truetype');
+    src: url('/fonts/merriweather.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -29,11 +29,11 @@
     --link-color-hover: (99, 94, 201);
     --visited-color: #d7912e;
     --code-background-color: #f2e9e1;
-    --code-color: #575279;
+    --code-color: #56949f;
     --blockquote-color: #6e6a86;
     
     /* colorful header colors matching your obsidian setup */
-    --h1-color: #575279; /* text-color for title */
+    --h1-color: #262334; /* darker than text-color for title */
     --h2-color: #b4637a; /* maroon-ish */
     --h3-color: #d7827e; /* red-ish */
     --h4-color: #56949f; /* teal */
@@ -142,7 +142,7 @@
 
   hr {
     border: 0;
-    border-top: 1px dashed;
+    border-top: 1px solid #d4c0a8;
   }
 
   img {
@@ -154,14 +154,37 @@
     padding: 2px;
     background-color: var(--code-background-color);
     color: var(--code-color);
-    border-radius: 3px;
   }
 
   blockquote {
-    border-left: 1px solid #999;
-    color: var(--blockquote-color);
-    padding-left: 20px;
-    font-style: italic;
+    border: 1px solid #d4c0a8; /* thin solid border matching your theme */
+    background-color: #f7f1e8; /* slightly darker than your background for contrast */
+    padding: 5px 25px; /* more padding for breathing room */
+    margin: 0.5em 0.5em; /* vertical spacing */
+    font-family: 'merriweather', serif; /* different font - or try Georgia, serif */
+    font-size: 0.9em; /* slightly larger */
+    color: var(--h1-color);
+    text-align: justify;
+  }
+
+  .footnotes {
+    font-size: 0.8em;
+    vertical-align: super;
+    text-decoration: none;
+    font-style: normal;
+
+  }
+
+  .footnote-ref {
+    font-size: 0.8em;
+    vertical-align: super;
+    text-decoration: none;
+    font-style: normal;
+  }
+
+  sup a:hover {
+    background-color: rgba(62, 176, 165, 0.2);
+    text-decoration: none;
   }
 
   footer {
@@ -201,4 +224,7 @@
   ul.blog-posts li a:visited {
     color: var(--text-color);
   }
+  p {
+    text-align: justify;
+  } 
 </style>

@@ -27,8 +27,8 @@
 
 
   <meta itemprop="name" content="blog">
-  <meta itemprop="datePublished" content="2025-06-06T10:30:20+09:00">
-  <meta itemprop="dateModified" content="2025-06-06T10:30:20+09:00">
+  <meta itemprop="datePublished" content="2025-06-07T10:30:20+09:00">
+  <meta itemprop="dateModified" content="2025-06-07T10:30:20+09:00">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
   <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog/index.xml" title="théo raduszynski" />
@@ -43,7 +43,7 @@
 
   @font-face {
     font-family: 'merriweather';
-    src: url('/fonts/Merriweather-Regular.ttf') format('truetype');
+    src: url('/fonts/merriweather.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -63,11 +63,11 @@
     --link-color-hover: (99, 94, 201);
     --visited-color: #d7912e;
     --code-background-color: #f2e9e1;
-    --code-color: #575279;
+    --code-color: #56949f;
     --blockquote-color: #6e6a86;
     
      
-    --h1-color: #575279;  
+    --h1-color: #262334;  
     --h2-color: #b4637a;  
     --h3-color: #d7827e;  
     --h4-color: #56949f;  
@@ -176,7 +176,7 @@
 
   hr {
     border: 0;
-    border-top: 1px dashed;
+    border-top: 1px solid #d4c0a8;
   }
 
   img {
@@ -188,14 +188,37 @@
     padding: 2px;
     background-color: var(--code-background-color);
     color: var(--code-color);
-    border-radius: 3px;
   }
 
   blockquote {
-    border-left: 1px solid #999;
-    color: var(--blockquote-color);
-    padding-left: 20px;
-    font-style: italic;
+    border: 1px solid #d4c0a8;  
+    background-color: #f7f1e8;  
+    padding: 5px 25px;  
+    margin: 0.5em 0.5em;  
+    font-family: 'merriweather', serif;  
+    font-size: 0.9em;  
+    color: var(--h1-color);
+    text-align: justify;
+  }
+
+  .footnotes {
+    font-size: 0.8em;
+    vertical-align: super;
+    text-decoration: none;
+    font-style: normal;
+
+  }
+
+  .footnote-ref {
+    font-size: 0.8em;
+    vertical-align: super;
+    text-decoration: none;
+    font-style: normal;
+  }
+
+  sup a:hover {
+    background-color: rgba(62, 176, 165, 0.2);
+    text-decoration: none;
   }
 
   footer {
@@ -235,6 +258,9 @@
   ul.blog-posts li a:visited {
     color: var(--text-color);
   }
+  p {
+    text-align: justify;
+  } 
 </style>
 
 </head>
@@ -259,12 +285,12 @@
     <li>
       <span>
         <i>
-          <time datetime='2025-06-06'>
-            2025-06-06
+          <time datetime='2025-06-07'>
+            2025-06-07
           </time>
         </i>
       </span>
-      <a href="http://localhost:1313/blog/test-post/">This is a test post, not very interesting</a>
+      <a href="http://localhost:1313/blog/test-post/">On starting a blog</a>
     </li>
     
   </ul>
