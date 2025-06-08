@@ -32,4 +32,4 @@ A collection of various things I like with or without context! The order has no 
 - Toyota Corolla
 - Retro 90's cars
 - ducks
-- [Fusil de Tchekhov](https://fr.wikipedia.org/wiki/Fusil_de_Tchekhov)
+- [Chekhov's gun](https://en.wikipedia.org/wiki/Chekhov%27s_gun)
