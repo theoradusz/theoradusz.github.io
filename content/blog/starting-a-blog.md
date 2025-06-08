@@ -15,7 +15,7 @@ In the same vein as the Youtube playlists such as ["dark academia to romanticize
 
 But thinking about it, I believe getting into this habit of writing can lead to many positive effects on daily life. Getting better at writing would be great. It may help sorting out thoughts. It may allow to evacuate ideas that are piling up, or catch them before they get erased. It is also something I can come back to later, references of my experiences.
 
-More simply, exploring new hobbies and occupations is a nice thing, and maintaining a blog is fore sure a hobby in itself. It also helps in sorting out and sharing any other interest in life.
+More simply, exploring new hobbies and occupations is a nice thing, and maintaining a blog is for sure a hobby in itself. It also helps in sorting out and sharing any other interest in life.
 
 Making it as a public blog as opposed to a mere private [obsidian vault](https://obsidian.md/) is only a way to increase motivation, to kind of force myself to commit (and then to get to share and brag about it!).
 ### back to the old internet
