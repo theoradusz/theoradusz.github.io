@@ -4,25 +4,32 @@ title: "collection"
 
 A collection of various things I like with or without context! The order has no significance. I will probably add and remove things over time.
 
-## Music
+### Music
 - Dream Theater
 - Steven Wilson
 - Michael Jackson
 - Kirinji
 
-## Art
+### Art
 - Paul Signac
 
-## Books
+### Books
 - The three-body problem
 - The Foundation series
 
-## Food
+### Food
 - Potato chips
 - Pancakes
 - Sushi
 - Tofu
 
-## Random
+### Places
+- Nakano
+- Bastille
+- Shimokitazawa 
+
+### Random
 - Toyota Corolla
 - Retro 90's cars
+- ducks
+- [Fusil de Tchekhov](https://fr.wikipedia.org/wiki/Fusil_de_Tchekhov)
