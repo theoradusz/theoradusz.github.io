@@ -6,22 +6,7 @@
     <description>Recent content on théo raduszynski</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 07 Jun 2025 17:13:42 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>test_image</title>
-      <link>http://localhost:1313/blog/testimage/</link>
-      <pubDate>Sat, 07 Jun 2025 17:13:42 +0900</pubDate>
-      <guid>http://localhost:1313/blog/testimage/</guid>
-      <description>&lt;p&gt;#blog&#xA;&lt;img src=&#34;http://localhost:1313/images/blog/testimage.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>On starting a blog</title>
-      <link>http://localhost:1313/blog/test-post/</link>
-      <pubDate>Sat, 07 Jun 2025 10:30:20 +0900</pubDate>
-      <guid>http://localhost:1313/blog/test-post/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;start with a citation  &lt;br&gt;&#xA;&amp;ndash; Theo&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>collection</title>
       <link>http://localhost:1313/collection/</link>
