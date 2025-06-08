@@ -10,4 +10,4 @@ During my work days I am busy developing statistical models, especially **bayesi
 
 On the evenings and weekends, I like to go and discover Tokyo (every neighborhood is a village), think about optimizing **language learning** (especially japanese) or listen to **prog music**. I will try to [collect some random things](https://radusz.com/collection) I like.
 
-If you ever want to discuss statistics, water treatment, **science-fiction**, philosophy or Steven Wilson' latest album, you can reach me at theo@radusz.com!
+If you ever want to discuss statistics, water treatment, science-fiction, philosophy or Steven Wilson' latest album, you can reach me at theo@radusz.com!
