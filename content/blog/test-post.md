@@ -1,7 +1,8 @@
 +++
 date = '2025-06-07T10:30:20+09:00'
-draft = true
+draft = false
 title = 'On starting a blog'
+tags = ['test']
 +++
 > start with a citation     
 > -- Theo

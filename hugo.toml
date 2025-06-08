@@ -4,5 +4,15 @@ title = 'théo raduszynski'
 theme = 'hugo-bearblog'
 
 [params]
-  blog_description = "personal thoughts and questions"
+  blog_description = "personal page and some reflections"
   hideMadeWithLine = true
+
+[Author]
+  name = "Théo Raduszynski"
+  email  = "theo@radusz.com"
+
+[outputs]
+  home = ['html']
+  section = ['html']
+  taxonomy = ['html']
+  term = ['html']

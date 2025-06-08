@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blog on théo raduszynski</title>
-    <link>http://localhost:1313/blog/</link>
-    <description>Recent content in blog on théo raduszynski</description>
+    <title>Test on théo raduszynski</title>
+    <link>http://localhost:1313/tags/test/</link>
+    <description>Recent content in Test on théo raduszynski</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 07 Jun 2025 10:30:20 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/test/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>On starting a blog</title>
       <link>http://localhost:1313/blog/test-post/</link>

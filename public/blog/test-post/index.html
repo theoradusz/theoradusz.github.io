@@ -11,7 +11,7 @@
 start with a citation  
 &ndash; Theo
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
-<meta name="keywords" content="" />
+<meta name="keywords" content="test," />
 
 
 <meta property="og:url" content="http://localhost:1313/blog/test-post/">
@@ -24,6 +24,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     <meta property="article:section" content="blog">
     <meta property="article:published_time" content="2025-06-07T10:30:20+09:00">
     <meta property="article:modified_time" content="2025-06-07T10:30:20+09:00">
+    <meta property="article:tag" content="Test">
 
 
 
@@ -42,6 +43,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   <meta itemprop="datePublished" content="2025-06-07T10:30:20+09:00">
   <meta itemprop="dateModified" content="2025-06-07T10:30:20+09:00">
   <meta itemprop="wordCount" content="195">
+  <meta itemprop="keywords" content="Test">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
   <style>
@@ -270,9 +272,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   ul.blog-posts li a:visited {
     color: var(--text-color);
   }
-  p {
-    text-align: justify;
-  } 
+  
+  p + ul {
+    margin-top: -20px;
+  }
+
 </style>
 
 </head>
@@ -330,6 +334,8 @@ Here is a <a href="https://radusz.com">link</a>.</p>
 
 </content>
 <p>
+  
+  <a href="http://localhost:1313/tags/test/">#test</a>
   
 </p>
 
