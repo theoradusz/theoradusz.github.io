@@ -27,7 +27,7 @@ I am not saying that my *skyblog* of the late 2000s had any reader (well, I was 
 
 thank you for reading my first blog post!
 
-NB: despite the sadness that *skyblogs* have been shut down and most of them are probably become [lost media](https://en.wikipedia.org/wiki/Lost_media), I think it is amazing and very funny that the French national library (Bibliothèque Nationale de France) has been archiving them! You simply need to be an accredited researcher to access them.[^4]
+NB: despite the sadness that *skyblogs* have been shut down and most of them have probably become [lost media](https://en.wikipedia.org/wiki/Lost_media), I think it is amazing and very funny that the French national library (Bibliothèque Nationale de France) has been archiving them! You simply need to be an accredited researcher to access them.[^4]
 
 [^1]: [France's first social network Skyblog shuts down after 20 years](https://www.rfi.fr/en/france/20230820-france-s-first-social-network-skyblog-shuts-down-after-20-years)
 [^2]: Now that I try to remember I think I was quite an enjoyer of the [Black Eyes Peas](https://en.wikipedia.org/wiki/Black_Eyed_Peas) and [Timbaland](https://en.wikipedia.org/wiki/Timbaland) at the time.
