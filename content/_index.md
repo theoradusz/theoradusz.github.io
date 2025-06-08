@@ -18,7 +18,7 @@ Outside of work, I am interested in many things including:
 - reading books, looking at art, listening to prog music
 - go for walks in the neighborhood
 
-Please find some random things I appreciate in my [collection](https://radusz.com/collection).
+You can find some random things I appreciate in my [collection](https://radusz.com/collection).
 
 Don't hesitate to reach out at theo@radusz.com!
 

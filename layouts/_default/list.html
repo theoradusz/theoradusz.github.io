@@ -26,11 +26,16 @@
   </ul>
   {{ if not .Data.Singular }}
   <div>
-    <hr>
     {{ range .Site.Taxonomies.tags }}
     <a href="{{ .Page.Permalink }}" class="tag">#{{ .Page.Title | lower }}</a>&nbsp;
     {{ end }}
   </div>
   {{ end }}
 </content>
+<hr>
+<p>
+  <small>
+    <a href="https://radusz.com/blog/index.xml" type="application/rss+xml" target="_blank">Add this blog</a> to your RSS reader.
+  </small>
+</p>
 {{ end }}

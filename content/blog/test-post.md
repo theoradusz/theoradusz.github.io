@@ -1,6 +1,6 @@
 +++
 date = '2025-06-07T10:30:20+09:00'
-draft = false
+draft = true
 title = 'On starting a blog'
 tags = ['test']
 +++
