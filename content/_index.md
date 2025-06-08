@@ -2,23 +2,12 @@
 title: ""
 ---
 # Hello, welcome to my page!
-My name is Théo, I live in Japan and was born in Paris (France) in the nineties.
+I'm Théo, a machine learning engineer based in Tokyo, but I first came to the world in 1998's Paris.
 
-I am a **machine learning engineer**. I work at [WOTA](https://wota.co.jp/), a Tokyo-based start-up where I am building algorithms and cloud infrastructure to try and make **water recycling systems** smarter, safer and more efficient.
- We are building small-scale water reuse systems, aiming at tackling global water issues.
+Recently, I spend my days building algorithms and cloud infrastructure at [WOTA](https://wota.co.jp/), where we are aiming to solve water issues by making small and autonomous water reuse systems! 
 
-At work I enjoy:
-- developing statistical models, especially **Bayesian models** 
-- learning from academic research and quickly testing new approaches
-- watching systems in action and how software acts on the real world
-- coffee breaks
+During my work days I am busy developing statistical models, especially **Bayesian models**, in order to make water recycling systems smarter and safer. I find it very satistying to watch code and equations become actions once deployed in the real world! When not having a coffee break, I also enjoy reading papers to look for new approaches to try.
 
-Outside of work, I am interested in many things including:
-- language learning, especially **japanese**
-- reading books, looking at art, listening to prog music
-- go for walks in the neighborhood
+On the evenings and weekends, I like to go and discover Tokyo (every neighborhood is a village), think about optimizing language learning (especially japanese) or listen to prog rock. I will try to [collect some random things](https://radusz.com/collection) I like.
 
-You can find some random things I appreciate in my [collection](https://radusz.com/collection).
-
-Don't hesitate to reach out at theo@radusz.com!
-
+If you ever want to discuss statistics, water treatment, science-fiction or Steven Wilson, I am here at theo@radusz.com!
