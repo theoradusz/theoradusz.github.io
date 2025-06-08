@@ -8,7 +8,7 @@
 <title>blog | théo raduszynski</title>
 <meta name="title" content="blog" />
 <meta name="description" content="" />
-<meta name="keywords" content="" />
+<meta name="keywords" content="writing," />
 
 
 <meta property="og:url" content="http://localhost:1313/blog/">
@@ -27,8 +27,8 @@
 
 
   <meta itemprop="name" content="blog">
-  <meta itemprop="datePublished" content="2025-06-07T10:30:20+09:00">
-  <meta itemprop="dateModified" content="2025-06-07T10:30:20+09:00">
+  <meta itemprop="datePublished" content="2025-06-08T18:37:53+09:00">
+  <meta itemprop="dateModified" content="2025-06-08T18:37:53+09:00">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
   <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog/index.xml" title="théo raduszynski" />
@@ -110,6 +110,12 @@
     color: var(--h2-color);
   }
 
+  img {
+     
+    display: block;
+    margin: 0 auto;
+  }
+
   h3 {
     color: var(--h3-color);
   }
@@ -163,7 +169,7 @@
   time {
     font-family: 'charter', monospace;
     font-style: normal;
-    font-size: 1.1em;  
+    font-size: 1.0em;  
   }
 
   span.post-meta {
@@ -249,6 +255,7 @@
   ul.blog-posts {
     list-style-type: none;
     padding: unset;
+    font-size: 1.2em;
   }
 
   ul.blog-posts li {
@@ -256,7 +263,7 @@
   }
 
   ul.blog-posts li span {
-    flex: 0 0 130px;
+    flex: 0 0 150px;
   }
 
   ul.blog-posts li a:visited {
@@ -265,6 +272,19 @@
   
   p + ul {
     margin-top: -20px;
+  }
+  h2 + ul {
+    margin-top: -20px;
+  }
+  h3 + ul {
+    margin-top: -20px;
+  }
+
+  sup { 
+       vertical-align: top; 
+       position: relative; 
+       top: -0.3em; 
+       font-size: 0.75em; 
   }
 
 </style>
@@ -289,12 +309,21 @@
   <ul class="blog-posts">
     
     <li>
-      No posts yet! please hold on a little
+      <span>
+        <i>
+          <time datetime='2025-06-08'>
+            2025-06-08
+          </time>
+        </i>
+      </span>
+      <a href="http://localhost:1313/blog/starting-a-blog/">starting a blog</a>
     </li>
     
   </ul>
   
   <div>
+    
+    <a href="http://localhost:1313/tags/writing/" class="tag">#writing</a>&nbsp;
     
   </div>
   
