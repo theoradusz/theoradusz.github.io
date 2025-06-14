@@ -2,7 +2,7 @@
 title: ""
 ---
 # Hello from Tokyo!
-I'm Théo, a machine learning engineer based in Japan, but I first came to the world in 1998's Paris.
+I'm Théo, a machine learning engineer based in Japan, but I first came to the world in 1998's Paris. [Here is my resume](/resume.pdf).
 
 Recently, I spend my days building algorithms and cloud infrastructure at [WOTA](https://wota.co.jp/), where we are aiming to solve water issues by making small and autonomous water reuse systems! 
 
