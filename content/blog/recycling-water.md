@@ -2,9 +2,8 @@
 title = "why it's important we try recycling water"
 date = '2025-06-21T10:05:28+09:00'
 draft = false
-tags = []
+tags = ['water']
 +++
-#blog
 I think it's always good to take a step back and contemplate what I am doing. I'm starting this blog with a short, personal, probably incomplete list of the reasons why I am doing my job! 
 
 At WOTA, we try to make machines that turn your dirty water into a liquid you can use again and again. The reasons to do that can be adressed and you may find more on the [official website](https://wota.co.jp/). I will simply discuss some random aspects of water recycling I find interesting!!
