@@ -5,6 +5,7 @@ title = 'the everyday potato gratin'
 tags = ['recipe']
 +++
 (this will be a bilingual english and japanese post)
+
 I am sharing today another french staple recipe that is so simple yet very delicious and comforting. A true everyday classic that you can customize easily!
 
 今日は改めて、簡単に作れるフランスの定番料理を共有いたします！フランスの家庭で毎日の料理で、シンプルで、美味しくて心を温めるじゃがいものグラタンです。
