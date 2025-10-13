@@ -30,6 +30,6 @@ tags = ['crepes']
 ## 結果
 Bon appétit!
 
-![](/images/blog/crepe.JPG)
+![](/images/blog/crepe1.JPG)
 
 ![](/images/blog/crepe2.JPG)
