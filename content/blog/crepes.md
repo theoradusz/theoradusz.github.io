@@ -28,6 +28,8 @@ tags = ['crepes']
 一つのクレープはおたまいっぱいの量です
 
 ## 結果
+Bon appétit!
 
 ![](/images/blog/crepe.JPG)
+
 ![](/images/blog/crepe2.JPG)
