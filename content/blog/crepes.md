@@ -6,7 +6,7 @@ tags = ['crepes']
 +++
 本日、デサートでもティータイムでも楽しめる甘いクレープのレシピーを共有します！非常に簡単です。
 
-![](/images/blog/crepe3.jpg)
+![](/images/blog/crepe3.JPG)
 
 
 > ### 必要なもの（〜10枚）
@@ -29,5 +29,5 @@ tags = ['crepes']
 
 ## 結果
 
-![](/images/blog/crepe1.jpg)
-![](/images/blog/crepe2.jpg)
+![](/images/blog/crepe.JPG)
+![](/images/blog/crepe2.JPG)
