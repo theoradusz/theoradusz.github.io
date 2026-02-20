@@ -12,11 +12,17 @@ A collection of various things I like with or without context! The order has no 
 - Kirinji
 - Tears for Fears
 #### Albums
-![Tears for Fears - The Hurting](/images/collection/the_hurting.jpg)
-![Micheal Jackson - Bad](/images/collection/bad_michael.jpg)
-![Dream Theater - A Dramatic Turn of Events](/images/collection/dramatic.jpg)
+> ![](/images/collection/the_hurting.jpg)
+>
+> Tears for Fears - The Hurting
 
+> ![](/images/collection/bad_michael.png)
+>
+> Michael Jackson - Bad
 
+> ![](/images/collection/dramatic.jpg)
+>
+> Dream Theater - A Dramatic Turn of Events
 
 ### Art
 - Paul Signac
