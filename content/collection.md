@@ -13,6 +13,9 @@ A collection of various things I like with or without context! The order has no 
 - Tears for Fears
 #### Albums
 ![Tears for Fears - The Hurting](/images/collection/the_hurting.jpg)
+![Micheal Jackson - Bad](/images/collection/bad_michael.jpg)
+![Dream Theater - A Dramatic Turn of Events](/images/collection/dramatic.jpg)
+
 
 
 ### Art
