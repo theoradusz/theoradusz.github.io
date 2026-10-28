@@ -1,0 +1,67 @@
+{{ define "main" }}
+{{- $words := where site.RegularPages "Section" "words" -}}
+{{- $n := strings.RuneCount .Title -}}
+{{- $per := cond (le $n 6) $n (math.Ceil (div $n 2.0)) -}}
+{{- $ja := .Params.ja | default slice -}}
+{{- $many := gt (len $ja) 1 -}}
+<article class="page" style="--h:{{ .Params.hue | default 262 }}">
+  <section class="tate" aria-label="{{ .Title }}" style="--per:{{ $per }}">
+    <h1 class="word">{{ .Title }}</h1>
+    <div class="yomi">{{ partial "words/pitch.html" . }}</div>
+    {{ with .Params.pos }}<div class="pos">{{ . }}</div>{{ end }}
+    {{ with .Params.quote }}
+      {{- $q := htmlEscape . -}}
+      {{- with $.Params.qword }}{{ $q = replace $q (htmlEscape .) (printf "<mark>%s</mark>" (htmlEscape .)) }}{{ end -}}
+      <p class="phrase">「{{ $q | safeHTML }}」</p>
+    {{ end }}
+    {{- $src := slice -}}
+    {{- with .Params.author }}{{ $src = $src | append . }}{{ end -}}
+    {{- with .Params.book }}{{ $src = $src | append (printf "『%s』" .) }}{{ end -}}
+    {{- with .Params.page }}{{ $src = $src | append (printf `<span class="tcy">%s</span>頁` .) }}{{ end -}}
+    {{ with $src }}<div class="source">{{ delimit . "　" | safeHTML }}</div>{{ end }}
+  </section>
+
+  <div class="body">
+    {{ if or $ja .Params.en }}
+    <section class="part">
+      <h2 class="cap">意味</h2>
+      <ol class="senses text">
+        {{- range $i, $d := $ja }}
+        {{ if $many }}<li><span class="n">{{ index (split "①②③④⑤⑥⑦⑧⑨" "") $i }}</span><span class="ja">{{ $d }}</span></li>
+        {{ else }}<li class="one ja">{{ $d }}</li>{{ end }}
+        {{- end }}
+        {{ with .Params.en }}<li class="{{ if not $many }}one {{ end }}en" lang="en">{{ if $many }}<span></span>{{ end }}<span>{{ . }}</span></li>{{ end }}
+      </ol>
+    </section>
+    {{ end }}
+    {{ with .Content }}
+    <section class="part">
+      <h2 class="cap">覚え書き</h2>
+      <div class="notes text">{{ . }}</div>
+    </section>
+    {{ end }}
+
+    <nav class="meta" aria-label="Words">
+      {{ with uniq (findRE `\p{Han}` .Title) }}
+      <div class="kanji">
+        {{ range . }}
+        {{- $k := . -}}
+        {{- $count := len (where $words "Title" "like" $k) -}}
+        <a href="{{ "/words/" | relURL }}?k={{ $k | urlquery }}" title="Words with {{ $k }}">{{ $k }}<span class="c">{{ $count }}</span></a>
+        {{ end }}
+      </div>
+      {{ end }}
+      <div class="row">
+        <span class="date">{{ .Date.Format "2006.01.02" }}</span>
+        {{ with .NextInSection }}<a class="btn" href="{{ .RelPermalink }}" title="{{ .Title }}"><svg viewBox="0 0 16 16"><path d="M10 3 5 8l5 5"/></svg>older</a>{{ end }}
+        {{ with .PrevInSection }}<a class="btn" href="{{ .RelPermalink }}" title="{{ .Title }}">newer<svg viewBox="0 0 16 16"><path d="m6 3 5 5-5 5"/></svg></a>{{ end }}
+        {{ if gt (len $words) 1 }}
+        {{- $urls := slice }}{{ range $words }}{{ if ne .RelPermalink $.RelPermalink }}{{ $urls = $urls | append .RelPermalink }}{{ end }}{{ end -}}
+        <button type="button" class="btn main" data-random="{{ $urls | jsonify }}"><svg viewBox="0 0 16 16"><path d="M2 4h3l6 8h3M2 12h3l6-8h3M12 2l2 2-2 2M12 10l2 2-2 2"/></svg>random</button>
+        {{ end }}
+      </div>
+    </nav>
+  </div>
+</article>
+{{ partial "words/random.html" . }}
+{{ end }}

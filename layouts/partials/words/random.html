@@ -1,0 +1,6 @@
+<script>
+document.querySelectorAll('[data-random]').forEach(b => b.addEventListener('click', () => {
+  const urls = JSON.parse(b.dataset.random);
+  location.href = urls[Math.floor(Math.random() * urls.length)];
+}));
+</script>

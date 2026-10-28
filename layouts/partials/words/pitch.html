@@ -1,0 +1,12 @@
+{{- /* The reading, mora by mora. accent is the drop position (0 = flat, -1 = unknown). */ -}}
+{{- $acc := int (.Params.accent | default -1) -}}
+{{- $m := .Params.morae | default (slice .Params.reading) -}}
+{{- $last := sub (len $m) 1 -}}
+<span class="pitch"{{ if ge $acc 0 }} aria-label="{{ .Params.reading }}, accent {{ $acc }}"{{ end }}>
+{{- range $i, $x := $m -}}
+  {{- $hi := false -}}
+  {{- if eq $acc 0 }}{{ $hi = gt $i 0 }}{{ else if eq $acc 1 }}{{ $hi = eq $i 0 }}{{ else if gt $acc 1 }}{{ $hi = and (gt $i 0) (lt $i $acc) }}{{ end -}}
+  {{- $drop := and (gt $acc 0) (eq $i (sub $acc 1)) (lt $i $last) -}}
+  <span class="m{{ if $hi }} hi{{ end }}{{ if $drop }} drop{{ end }}">{{ $x }}</span>
+{{- end -}}
+</span>

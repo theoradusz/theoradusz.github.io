@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{- $desc := .Params.description -}}
+  {{- if .IsPage }}{{ $desc = printf "%s（%s）%s" .Title .Params.reading (delimit (.Params.ja | default slice) " ") }}{{ end }}
+  <title>{{ if .IsPage }}{{ .Title }} · {{ end }}言葉 · {{ .Site.Title }}</title>
+  <meta name="description" content="{{ $desc }}">
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ if .IsPage }}{{ with .Params.quote }}「{{ . }}」 {{ end }}{{ .Params.en }}{{ else }}{{ $desc }}{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta name="twitter:card" content="summary">
+  {{ with site.GetPage "/words" }}{{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="言葉">{{ end }}{{ end }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=EB+Garamond:wght@400;500&family=Zen+Maru+Gothic:wght@400;500&display=swap">
+  {{ partial "words/style.html" . }}
+</head>
+<body>
+  <header class="top">
+    <a href="{{ "/" | relURL }}">théo</a>
+    <a href="{{ "/words/" | relURL }}">言葉</a>
+  </header>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+</body>
+</html>

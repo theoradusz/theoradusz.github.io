@@ -1,0 +1,62 @@
+{{ define "main" }}
+{{- $words := .RegularPages.ByDate.Reverse -}}
+<div class="idx-head">
+  <h1>{{ .Title }}</h1>
+  {{ if $words }}
+  <input id="q" type="search" aria-label="Search words" placeholder="search: word, reading, english">
+  {{- $urls := slice }}{{ range $words }}{{ $urls = $urls | append .RelPermalink }}{{ end }}
+  <button type="button" class="btn" data-random="{{ $urls | jsonify }}"><svg viewBox="0 0 16 16"><path d="M2 4h3l6 8h3M2 12h3l6-8h3M12 2l2 2-2 2M12 10l2 2-2 2"/></svg>random</button>
+  <div class="ago" id="ago" hidden></div>
+  {{ end }}
+</div>
+{{ with $words }}
+<div class="shelf">
+  {{ range . }}
+  <a class="spine" href="{{ .RelPermalink }}" style="--h:{{ .Params.hue | default 262 }};height:{{ add 190 (mul 40 (strings.RuneCount .Title)) }}px"
+     data-search="{{ .Title }} {{ .Params.reading }} {{ lower .Params.en }}" data-date="{{ .Date.Format "2006-01-02" }}">
+    <span class="w">{{ .Title }}</span><span class="r">{{ .Params.reading }}</span>
+  </a>
+  {{ end }}
+</div>
+<p class="empty" id="none" hidden></p>
+{{ else }}
+<p class="empty">No words yet.</p>
+{{ end }}
+{{ partial "words/random.html" . }}
+<script>
+(() => {
+  const q = document.getElementById('q');
+  if (!q) return;
+  const spines = [...document.querySelectorAll('.spine')];
+  const none = document.getElementById('none');
+  const filter = () => {
+    const v = q.value.trim().toLowerCase();
+    let shown = 0;
+    spines.forEach(s => { s.hidden = !!v && !s.dataset.search.includes(v); shown += !s.hidden; });
+    none.hidden = shown > 0;
+    none.textContent = `No word matches “${q.value}”.`;
+  };
+  q.addEventListener('input', filter);
+  const k = new URLSearchParams(location.search).get('k');
+  if (k) { q.value = k; filter(); }
+
+  // words kept on this day in earlier years
+  const now = new Date();
+  const md = `${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+  const past = spines.filter(s => s.dataset.date.slice(5) === md && +s.dataset.date.slice(0, 4) < now.getFullYear());
+  if (past.length) {
+    const ago = document.getElementById('ago');
+    const years = now.getFullYear() - +past[0].dataset.date.slice(0, 4);
+    ago.append(`${years === 1 ? 'A year' : years + ' years'} ago today you kept `);
+    past.forEach((s, i) => {
+      const a = document.createElement('a');
+      a.href = s.href; a.textContent = s.querySelector('.w').textContent;
+      if (i) ago.append('、');
+      ago.append(a);
+    });
+    ago.append('.');
+    ago.hidden = false;
+  }
+})();
+</script>
+{{ end }}
