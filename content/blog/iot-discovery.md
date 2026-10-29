@@ -1,9 +1,11 @@
-+++
-title = 'Secured wireless communication between IoT devices with AWS greengrass Discovery'
-date = '2026-04-28T11:00:00+09:00'
-draft = false
-tags = ['iot', 'aws']
-+++
+---
+title: Secured wireless communication between IoT devices with AWS greengrass Discovery
+date: "2026-04-28T11:00:00+09:00"
+tags:
+  - iot
+  - aws
+draft: false
+---
 As a ML engineer working with IoT systems, I often have the need to make separate IoT devices communicate wirelessly together to be in sync. A sensor prototype running on one board needs to send its readings to a gateway device running the control logic. Or two sensor units need to synchronize their sampling without being wired together, or integrated with the same software.
 
 The classic approach is to put everything on the same board, same codebase, same process. But this bring a number of challenges as you lose modularity, and every hardware change means refactoring everything. For such prototyping, in-house evaluation use cases what you really want is: independent devices, each running their own logic, communicating wirelessly over the local network with mutual authentication. No need to wire everything in the same board, but no cloud roundtrip either.

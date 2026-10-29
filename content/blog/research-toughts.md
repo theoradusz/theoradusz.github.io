@@ -1,10 +1,9 @@
-+++
-title = 'Some thoughts on my research experience in disaster mitigation'
-date = '2026-05-25T7:59:30+09:00'
-draft = false
-tags = []
-+++
-
+---
+title: Some thoughts on my research experience in disaster mitigation
+date: "2026-05-25T7:59:30+09:00"
+tags: []
+draft: false
+---
 I was recently interviewed by a colleague. He wanted to hear about my  experience as a researcher in the field of disaster mitigation in Japan, coming here with a french point of view. I am seizing this occasion today to write about my background and personal insights on this matter.
 
 There is a certain disconnect between what I had imagined and hoped I would be doing as a researcher, compared to what actually happened.

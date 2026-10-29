@@ -1,5 +1,5 @@
 ---
-title: "collection"
+title: collection
 ---
 # my collection
 A collection of various things I like with or without context! The order has no significance. I will probably add and remove things over time.

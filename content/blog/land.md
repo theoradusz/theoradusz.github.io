@@ -1,9 +1,10 @@
-+++
-date = '2026-02-20T23:00:00+09:00'
-draft = false
-title = 'How to buy land in the countryside of Japan!'
-tags = ['countryside']
-+++
+---
+title: "How to buy land in the countryside of Japan!"
+date: "2026-02-20T23:00:00+09:00"
+tags:
+  - countryside
+draft: false
+---
 Below are some learnings related to buying land in the countryside of Japan, especially for foreigners or people like me who never bought real estate in their life. An exciting project of mine is to buy a piece of forest land in the middle of (almost) nowhere and build myself a retreat to enjoy life freed of worries of salaryman daily life. I am now very close of starting this project, so let me share a few things I would recommend for anyone with similar ambitions!
 
 Maybe some of these advice will sound obvious but let it be set in (electronic) stone.

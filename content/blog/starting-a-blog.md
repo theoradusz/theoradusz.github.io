@@ -1,9 +1,10 @@
-+++
-title = 'starting a blog'
-date = '2025-06-08T18:37:53+09:00'
-draft = false
-tags = ['writing']
-+++
+---
+title: starting a blog
+date: "2025-06-08T18:37:53+09:00"
+tags:
+  - writing
+draft: false
+---
 I remember having a *skyblog*[^1] back in middle school, when basically everyone had one. But memories are blurry: I don't even remeber what I was posting, probably some old school youtube links of songs I liked[^2] and pixelated images of some early-stage memes. Anyway, it hurts to say that more or less 15 years have passed since my last encounter with the world of blogs and shared some thoughts with the outside world.
 ### the urge to touch grass and start writing
 In the same vein as the Youtube playlists such as ["dark academia to romanticize studying"](https://www.youtube.com/watch?v=k5rEQ2wFPUw) and the likes, I feel we are starting to *romanticize* having an old school simple blog where you would write spontaneous, deep insights mixed up with mundane pictures of cats in the streets. It very well be one of the reasons I am starting. 

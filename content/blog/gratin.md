@@ -1,9 +1,10 @@
-+++
-date = '2025-08-03T10:30:20+09:00'
-draft = false
-title = 'the everyday potato gratin'
-tags = ['recipe']
-+++
+---
+title: the everyday potato gratin
+date: "2025-08-03T10:30:20+09:00"
+tags:
+  - recipe
+draft: false
+---
 (this will be a bilingual english and japanese post)
 
 I am sharing today another french staple recipe that is so simple yet very delicious and comforting. A true everyday classic that you can customize easily!

@@ -1,5 +1,5 @@
 ---
-title: 言葉
-description: Japanese words I met in books, and what they made me think of.
+title: japanese words collection
+description: A collection of Japanese words met in books.
 outputs: [html, rss, json]
 ---

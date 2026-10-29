@@ -1,9 +1,10 @@
-+++
-date = '2025-07-10T08:30:20+09:00'
-draft = false
-title = 'simple french "flan aux oeufs" (egg custard cream)'
-tags = ['recipe']
-+++
+---
+title: "simple french \"flan aux oeufs\" (egg custard cream)"
+date: "2025-07-10T08:30:20+09:00"
+tags:
+  - recipe
+draft: false
+---
 I miss simple french foods, and some are almost impossible to find in japanese supermarkets. Here is a very simple dessert that is actually quite similar to japanese *purin* (プリン), but there is definitely a slighy difference in the taste! It is also cheaper and healthier to make yourself, and almost impossible to fail.
 
 > ### Things you will need for 2 portions
