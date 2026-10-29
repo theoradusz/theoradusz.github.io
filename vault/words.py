@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""kotonoha: Japanese words kept in the Obsidian vault `fragments`, published to radusz.com/words/.
+"""words: Japanese words kept in the Obsidian vault `fragments`, published to radusz.com/words/.
 
   enrich  fill empty reading / accent / pos / ja / en fields from Japanese Wiktionary and Jisho
   sync    write every note with `publish: true` to content/words/ (and remove unpublished ones)
@@ -22,7 +22,7 @@ VAULT = Path(os.environ.get("KOTONOHA_VAULT", Path.home() / "Documents" / "fragm
 SITE = Path(__file__).resolve().parent.parent
 CONTENT = SITE / "content" / "words"
 SITE_URL = "https://radusz.com/words/"
-TODAY_NOTE = "今日の言葉.md"
+TODAY_NOTE = "_今日の言葉.md"
 UA = "kotonoha/1.0 (https://radusz.com/words/)"
 
 # traditional colour names -> hue, used for each word's sheet
@@ -217,7 +217,7 @@ def jisho(word):
 def enrich():
     for n in notes():
         changed = False
-        if not n.get("found"):
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(n.get("found"))):  # empty, or a template placeholder left as is
             n.meta["found"] = dt.date.fromtimestamp(n.path.stat().st_birthtime).isoformat()
             changed = True
         if n.get("enriched") is not True:
@@ -252,6 +252,38 @@ def morae(reading):
     return out
 
 
+KANA = dict(zip(
+    "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん"
+    "がぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽぁぃぅぇぉゔ",
+    "a i u e o ka ki ku ke ko sa shi su se so ta chi tsu te to na ni nu ne no ha hi fu he ho "
+    "ma mi mu me mo ya yu yo ra ri ru re ro wa o n ga gi gu ge go za ji zu ze zo da ji zu de do "
+    "ba bi bu be bo pa pi pu pe po a i u e o vu".split()))
+YOON = {"ゃ": "a", "ゅ": "u", "ょ": "o"}
+
+
+def romaji(reading):
+    """Hepburn romaji for a kana reading, used as the page address: しゅんじゅん → shunjun."""
+    kana = "".join(chr(ord(c) - 0x60) if "ァ" <= c <= "ヶ" else c for c in reading)
+    out, double = "", False
+    for c in kana:
+        if c == "っ":
+            double = True
+            continue
+        if c == "ー":
+            out += out[-1:] if out[-1:] in ("a", "i", "u", "e", "o") else ""
+            continue
+        if c in YOON and out and out[-1] == "i":
+            base = out[:-1]
+            out = base + ("" if base.endswith(("sh", "ch", "j")) else "y") + YOON[c]
+            continue
+        r = KANA.get(c, "")
+        if double and r:
+            r = ("t" if r.startswith("ch") else r[0]) + r
+        double = False
+        out += r
+    return re.sub(r"[^a-z-]", "", out) or "word"
+
+
 def hue(note):
     name = str(note.get("color")).strip().lower()
     if name in COLORS:
@@ -259,22 +291,36 @@ def hue(note):
     return list(COLORS.values())[sum(map(ord, note.word)) % len(COLORS)]
 
 
-def sync():
-    CONTENT.mkdir(parents=True, exist_ok=True)
-    keep = set()
+def published():
+    """Published notes, each with its page slug: the romaji reading, numbered when two words share it."""
+    out, used = [], set()
     for n in notes():
         if n.get("publish") is not True:
             continue
+        base = romaji(str(n.get("reading")) or n.word)
+        slug, i = base, 2
+        while slug in used:
+            slug, i = f"{base}-{i}", i + 1
+        used.add(slug)
+        n.slug = slug
+        out.append(n)
+    return out
+
+
+def sync():
+    CONTENT.mkdir(parents=True, exist_ok=True)
+    keep = set()
+    for n in published():
         quote, qword = n.quote()
         reading = str(n.get("reading")) or n.word
         acc = str(n.get("accent")).strip()
-        fm = {"title": n.word, "date": str(n.get("found")), "slug": n.word,
+        fm = {"title": n.word, "date": str(n.get("found")), "slug": n.slug,
               "reading": reading, "morae": morae(reading), "accent": int(acc) if acc.isdigit() else -1,
               "pos": n.get("pos"), "hue": hue(n),
               "ja": [d for d in n.get("ja", []) if d] if isinstance(n.get("ja"), list) else [n.get("ja")],
               "en": n.get("en"), "quote": quote, "qword": qword,
               "author": n.get("author"), "book": n.get("book"), "page": str(n.get("page"))}
-        out = CONTENT / f"{n.word}.md"
+        out = CONTENT / f"{n.slug}.md"
         text = json.dumps(fm, ensure_ascii=False, indent=2) + "\n\n" + n.notes() + "\n"
         if not out.exists() or out.read_text(encoding="utf-8") != text:
             out.write_text(text, encoding="utf-8")
@@ -287,13 +333,13 @@ def sync():
 
 
 def today():
-    published = [n for n in notes() if n.get("publish") is True]
+    words = published()
     date = dt.date.today()
     lines = [f"# 今日の言葉　{date.isoformat()}", ""]
-    if not published:
+    if not words:
         lines.append("No published words yet. Set `publish: true` on a note in this folder.")
     else:
-        n = random.Random(date.isoformat()).choice(published)
+        n = random.Random(date.isoformat()).choice(words)
         quote, _ = n.quote()
         source = "".join(filter(None, [n.get("author"), f"『{n.get('book')}』" if n.get("book") else ""]))
         lines += [f"## [[{n.word}]]", str(n.get("reading")), ""]
@@ -302,8 +348,8 @@ def today():
         meaning = [f"> {d}" for d in (n.get("ja") or [])] + ([f"> {n.get('en')}"] if n.get("en") else [])
         if meaning:
             lines += ["> [!note]- 意味"] + meaning + [""]
-        lines += [f"[{SITE_URL}{n.word}/]({SITE_URL}{urllib.parse.quote(n.word)}/)", ""]
-        past = [m for m in published
+        lines += [f"[{SITE_URL}{n.slug}/]({SITE_URL}{n.slug}/)", ""]
+        past = [m for m in words
                 if str(m.get("found"))[5:] == date.isoformat()[5:] and str(m.get("found"))[:4] < str(date.year)]
         if past:
             lines += ["### 一年前の今日"] + [f"- [[{m.word}]] ({m.get('found')})" for m in past]

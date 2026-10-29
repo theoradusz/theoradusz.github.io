@@ -3,16 +3,18 @@
 <div class="idx-head">
   <h1>{{ .Title }}</h1>
   {{ if $words }}
-  <input id="q" type="search" aria-label="Search words" placeholder="search: word, reading, english">
-  {{- $urls := slice }}{{ range $words }}{{ $urls = $urls | append .RelPermalink }}{{ end }}
-  <button type="button" class="btn" data-random="{{ $urls | jsonify }}"><svg viewBox="0 0 16 16"><path d="M2 4h3l6 8h3M2 12h3l6-8h3M12 2l2 2-2 2M12 10l2 2-2 2"/></svg>random</button>
-  <div class="ago" id="ago" hidden></div>
+  <div class="tools">
+    <input id="q" type="search" aria-label="Search words" placeholder="search">
+    {{- $urls := slice }}{{ range $words }}{{ $urls = $urls | append .RelPermalink }}{{ end }}
+    <button type="button" class="btn" data-random="{{ $urls | jsonify }}"><svg viewBox="0 0 16 16"><path d="M2 4h3l6 8h3M2 12h3l6-8h3M12 2l2 2-2 2M12 10l2 2-2 2"/></svg>random</button>
+  </div>
   {{ end }}
 </div>
+<p class="ago" id="ago" hidden></p>
 {{ with $words }}
 <div class="shelf">
   {{ range . }}
-  <a class="spine" href="{{ .RelPermalink }}" style="--h:{{ .Params.hue | default 262 }};height:{{ add 190 (mul 40 (strings.RuneCount .Title)) }}px"
+  <a class="spine" href="{{ .RelPermalink }}" style="--h:{{ .Params.hue | default 262 }};--n:{{ strings.RuneCount .Title }};--r:{{ strings.RuneCount .Params.reading }}"
      data-search="{{ .Title }} {{ .Params.reading }} {{ lower .Params.en }}" data-date="{{ .Date.Format "2006-01-02" }}">
     <span class="w">{{ .Title }}</span><span class="r">{{ .Params.reading }}</span>
   </a>

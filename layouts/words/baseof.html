@@ -15,14 +15,17 @@
   {{ with site.GetPage "/words" }}{{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="言葉">{{ end }}{{ end }}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=EB+Garamond:wght@400;500&family=Zen+Maru+Gothic:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;700;800&family=EB+Garamond:wght@400;500&display=swap">
   {{ partial "words/style.html" . }}
 </head>
-<body>
-  <header class="top">
-    <a href="{{ "/" | relURL }}">théo</a>
-    <a href="{{ "/words/" | relURL }}">言葉</a>
+<body class="{{ if .IsPage }}is-word{{ else }}is-list{{ end }}">
+  {{ if .IsPage }}
+  <a class="back" href="{{ "/words/" | relURL }}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>words</a>
+  {{ else }}
+  <header class="blog-head">
+    {{- partial "header.html" . -}}
   </header>
+  {{ end }}
   <main>
     {{ block "main" . }}{{ end }}
   </main>

@@ -1,5 +1,6 @@
 baseURL = 'https://radusz.com'
 languageCode = 'en-us'
+timeZone = 'Asia/Tokyo'
 title = 'théo raduszynski'
 theme = 'hugo-bearblog'
 
