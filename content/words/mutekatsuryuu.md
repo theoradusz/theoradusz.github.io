@@ -17,7 +17,7 @@
   "ja": [
     "戦わずして勝つ、これが無手勝流"
   ],
-  "en": "winning without fighting; method used to win without fighting",
+  "en": "winning without fighting",
   "quote": "ようするに、先輩方へ遠慮することなく無手勝流にお酒が飲みたかったのです。",
   "qword": "無手勝流",
   "author": "森見登美彦",
