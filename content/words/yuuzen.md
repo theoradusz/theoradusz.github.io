@@ -23,6 +23,6 @@
   "page": ""
 }
 
-I think it says a lot that this is one of the first descriptions of master Higuchi  in the book. This word embodies the character’s calm, composure and coolness.
+Being of the first descriptions of master Higuchi in the book, it says a lot about him. This word embodies the character’s calm, composure and coolness.
 
 I understand that 悠 is about detachment. I aspire myself to reach on a day a level of detachment comparable to the one of master Higuchi. In this ideal state of affairs, all actions taken will be effortless and composed,  everything will be done `悠然と`.
